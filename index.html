@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>quest</title>
+	<style type="text/css">
+		.class2 {
+			background-image: url(class2.jpg);
+			background-size: 100% 100%;
+			position: absolute;
+			top: 0px;
+		}
+		/*.koridor {
+			background-image: url(koridor.jpg);
+			background-size: 100% 100%;
+			position: absolute;
+			top: 0px;
+		}*/
+		.door {
+			background-image: url(door2.png);
+			background-size: 100% 100%;
+			position: absolute;
+			top: 250px;
+			width: 500px;
+		}
+		.gg {
+			background-image: url(gg.png);
+			background-size: 100% 100%;
+			position: absolute;
+			top: 600px;
+			left: 1100px;
+			transition: 1s;
+			z-index: 1;
+		}
+		.drug {
+			background-image: url(drug.png);
+			background-size: 100% 100%;
+			background-color: lime;
+			position: absolute;
+			top: 600px;
+			left: 1750px;
+		}
+		.uchitel {
+			background-image: url(uchitel.png);
+			background-size: 100% 100%;
+			position: absolute;
+			top: 400px;
+			left: 600px;
+			transition: 2s;
+		}
+		.uchitel_talk {
+			position: absolute;
+			top: 300px;
+			left: 400px;
+			font: 2em Arial, sans-serif;
+    		text-shadow: red 1px 1px 0, red -1px -1px 0, 
+                 		 red -1px 1px 0, red 1px -1px 0;
+		}
+		.scoree{
+			position: absolute;
+			width: 150px;
+			height: 100px;
+			top: 200px;
+			left: 1000px;
+			background-color: gray;
+		}
+		.loc1_talkk{
+			position: absolute;
+			top: 550px;
+			left: 800px;
+			font: 2em Arial, sans-serif;
+    		text-shadow: red 1px 1px 0, red -1px -1px 0, 
+                 		 red -1px 1px 0, red 1px -1px 0;
+		}
+		.loc1_talkkk{
+			position: absolute;
+			top: 300px;
+			left: 1650px;
+			font: 2em Arial, sans-serif;
+    		text-shadow: red 1px 1px 0, red -1px -1px 0, 
+                 		 red -1px 1px 0, red 1px -1px 0;
+		}
+		.loc1_talkk2{
+			position: absolute;
+			top: 650px;
+			left: 1350px;
+			font: 2em Arial, sans-serif;
+    		text-shadow: red 1px 1px 0, red -1px -1px 0, 
+                 		 red -1px 1px 0, red 1px -1px 0;
+		}
+		.loc1_talkkk2{
+			position: absolute;
+			top: 300px;
+			left: 1650px;
+			font: 2em Arial, sans-serif;
+    		text-shadow: red 1px 1px 0, red -1px -1px 0, 
+                 		 red -1px 1px 0, red 1px -1px 0;
+		}
+		.loc1_baitalk{
+			position: absolute;
+			top: 650px;
+			left: 1150px;
+			font: 2em Arial, sans-serif;
+    		text-shadow: red 1px 1px 0, red -1px -1px 0, 
+                 		 red -1px 1px 0, red 1px -1px 0;
+		}
+		.loc1_baitalk1{
+			position: absolute;
+			top: 350px;
+			left: 500px;
+			font: 2em Arial, sans-serif;
+    		text-shadow: red 1px 1px 0, red -1px -1px 0, 
+                 		 red -1px 1px 0, red 1px -1px 0;
+            transition: 2s;
+		}
+		.body{
+			background-image: url(class2);
+			background-size: 100% 100%;
+			position: absolute;
+			top: 0px;
+		}
+		.doorsknob{
+			background-image: url(doorsknob.png);
+			background-size: 100% 100%;
+			position: absolute;
+			top: 0px;
+			width: 100px;
+		}
+		.koridortalk{
+			position: absolute;
+			top: 600px;
+			left: 1000px;
+			font: 2em Arial, sans-serif;
+    		text-shadow: red 1px 1px 0, red -1px -1px 0, 
+                 		 red -1px 1px 0, red 1px -1px 0;
+            transition: 2s;
+		}
+		.inv{
+			background-size: 100% 100%;
+			position: absolute;
+			height: 150px;
+			width: 150px;
+			top: 50px;
+			background-color: lawngreen;
+			border-radius: 20px;
+			border: 2px solid darkslategray;
+		}
+		.inv1{
+			position: absolute;
+			background-size: 100% 100%;
+			height: 150px;
+			width: 150px;
+			top: 50px;
+			left: 200px;
+			background-color: lawngreen;
+			border-radius: 20px;
+			border: 2px solid darkslategray;
+		}
+		.trash{
+			background-image: url(trash.png);
+			background-size: 100% 100%;
+			position: absolute;
+			top: 550px;
+			left: 1445px;
+			width: 100px;
+		}
+		.lighter{
+			background-image: url(lighter.png);
+			background-size: 100% 100%;
+			position: absolute;
+			top: 550px;
+			left: 1445px;
+			width: 10px;
+			transition: 2s;
+			/*opacity: 0;*/
+		}
+</style>
+</head>
+<body class="class2" style="height: 1000px; width: 2000px;">
+	<div class="inv"></div>
+	<div class="inv1"></div>
+	<div class="scoree" style="display: none;"><span style="font-size: 100px;"class="score"></span></div>
+	<!-- <div class="location1" style="display: block;"> -->
+		<div class="loc1_talk" style="display: none;">
+			<div class="loc1_talkk">Как же скучно, я хочу сбежать с последнего урока, поможешь?<<ГГ</div>
+			<div class="loc1_talkkk">У меня есть идея, но это будет опасно, если тебя заметят то ты пойдешь на учёт<<Друг</div>
+	</div>
+<div style="display: flex;">
+	<button class="btn" style="height: 100px; width: 100px; display: none;margin-left: 1200px;">ЖМИ!</button>	
+</div>
+<!-- <div class="koridor" style="display: none;height: 1000px; width: 2000px;"></div> -->
+<div class="uchitel" style="height: 400px; width: 250px"></div>
+<div class="drug" style="height: 200px; width: 200px"></div>
+<div class="gg" style="height: 400px; width: 250px"></div>
+<div class="door" style="height: 400px; width: 300px; margin-left: 990px; margin-top: 70px; display: none;"></div>
+<div class="lighter" style="height: 150px; width:150px; display: none;"></div>
+<div class="trash" style="height: 230px; width: 200px; display: none"></div>
+<div class="doorsknob" style="height: 50px; width: 50px; display: none; margin-left: 150px;margin-top: 525px"></div>
+	<div class="loc1_talk2" style="display: none">
+		<div class="loc1_talkk2">Какой план?<<ГГ</div>
+		<div class="loc1_talkkk2" style="margin-left: 50px;">Выберись любым способом из класса, найди где-нибудь зажигалку, можешь устроить пожарную тревогу<<Друг</div>
+	</div>
+<div class="loc1_variants_block" style="display: none">
+		<div class="loc1_tualet">*Сказать*: Можно в туалет?</div>
+		<div class="loc1_bait">*Попробовать*: Отвлечь учителя (сложный вариант)</div>
+	</div>
+	<div class="uchitel_talk" style="display: none;">Иди, даю тебе полторы минуты<<Учитель</div>
+<div class="loc1_baitalk" style="display: none;">Мария Ивановна, у вас ошибка в 3 задаче!<<ГГ</div>
+<div class="loc1_baitalk1" style="display: none; margin-left: 50px;">Где? Что-то я не вижу<<Учитель</div>
+<div class="koridortalk" style="display: none">Мне нужно найти бумагу и зажигалку</div>
+<div class="tualetb" style="height: 100px"></div>
+<!-- </div> -->
+</body>
+<script src="script.js"></script>
+</html>
